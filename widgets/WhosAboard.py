@@ -1,12 +1,12 @@
 import sqlite3
 
-from core.base.SuperManager import SuperManager
 from core.base.model.Widget import Widget
+from core.base.model.widgetSizes import WidgetSizes
 
 
 class WhosAboard(Widget):
 
-	SIZE = 'w_tall'
+	SIZE = WidgetSizes.w_tall
 	OPTIONS: dict = dict()
 
 	def __init__(self, data: sqlite3.Row):
