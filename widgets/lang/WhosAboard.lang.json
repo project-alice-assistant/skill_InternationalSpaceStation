@@ -1,7 +1,11 @@
 {
-	"title": {
-		"en": "ISS Crew",
-		"fr": "Equipage ISS",
-		"de": "ISS Crew"
+	"en": {
+		"title": "ISS Crew"
+	},
+	"de": {
+		"title": "ISS Crew"
+	},
+	"fr": {
+		"title": "Équipage ISS"
 	}
 }
