@@ -1,5 +1,7 @@
 # InternationalSpaceStation
 
+[![Continous Integration](https://gitlab.com/project-alice-assistant/skills/skill_InternationalSpaceStation/badges/master/pipeline.svg)](https://gitlab.com/project-alice-assistant/skills/skill_InternationalSpaceStation/pipelines/latest)
+
 ### Download
 
 ##### > WGET method
