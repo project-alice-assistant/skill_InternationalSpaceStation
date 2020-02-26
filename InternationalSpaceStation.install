@@ -1,6 +1,7 @@
 {
 	"name": "InternationalSpaceStation",
 	"version": "1.0.25",
+	"icon": "battle-net",
 	"author": "mjlill",
 	"maintainers": [
 		"maxbachmann",
