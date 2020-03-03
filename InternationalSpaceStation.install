@@ -2,7 +2,7 @@
 	"name": "InternationalSpaceStation",
 	"version": "1.0.26",
 	"icon": "fab fa-battle-net",
-	"category": "undefined",
+	"category": "information",
 	"author": "mjlill",
 	"maintainers": [
 		"maxbachmann",
