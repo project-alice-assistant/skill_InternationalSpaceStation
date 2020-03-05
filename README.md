@@ -2,13 +2,6 @@
 
 [![Continous Integration](https://gitlab.com/project-alice-assistant/skills/skill_InternationalSpaceStation/badges/master/pipeline.svg)](https://gitlab.com/project-alice-assistant/skills/skill_InternationalSpaceStation/pipelines/latest)
 
-### Download
-
-##### > WGET method
-```bash
-wget http://skills.projectalice.ch/InternationalSpaceStation -O ~/ProjectAlice/system/skillInstallTickets/InternationalSpaceStation.install
-```
-
 ### Description
 Inquire information about the international space station
 
