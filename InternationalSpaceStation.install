@@ -1,12 +1,13 @@
 {
 	"name": "InternationalSpaceStation",
-	"version": "1.0.26",
-	"icon": "fab fa-battle-net",
+	"version": "1.0.27",
+	"icon": "fas fa-space-shuttle",
 	"category": "information",
 	"author": "mjlill",
 	"maintainers": [
 		"maxbachmann",
-		"Psycho"
+		"Psycho",
+		"philipp2310"
 	],
 	"desc": "Inquire information about the international space station",
 	"aliceMinVersion": "1.0.0-a4",
