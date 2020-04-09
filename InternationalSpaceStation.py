@@ -50,7 +50,7 @@ class InternationalSpaceStation(AliceSkill):
 				language=self.activeLanguage()
 			)
 			place = countryData.get('countryName')
-		
+
 		textType = 'issPlacePosition' if place else 'issPosition'
 
 		answer = self.randomTalk(text=textType, replace=[
