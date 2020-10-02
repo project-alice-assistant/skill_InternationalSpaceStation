@@ -1,12 +1,9 @@
 {
 	"skill": "InternationalSpaceStation",
-	"icon": "lamp",
-	"description": "Informatiosn à propos de l'ISS",
 	"slotTypes": [],
 	"intents": [
 		{
 			"name": "Astronauts",
-			"description": "L'utilisateur demande la liste des astronautes",
 			"enabledByDefault": true,
 			"utterances": [
 				"qui se trouve sur la station spatiale internationale",
@@ -20,7 +17,6 @@
 		},
 		{
 			"name": "IssPosition",
-			"description": "L'utilisateur demande la position de la station",
 			"enabledByDefault": true,
 			"utterances": [
 				"où se trouve la station",

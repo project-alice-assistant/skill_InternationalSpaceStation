@@ -1,12 +1,9 @@
 {
 	"skill": "InternationalSpaceStation",
-	"icon": "lamp",
-	"description": "Inquire information about the ISS",
 	"slotTypes": [],
 	"intents": [
 		{
 			"name": "Astronauts",
-			"description": "User is asking for a list of current astronauts",
 			"enabledByDefault": true,
 			"utterances": [
 				"who is on the space station",
@@ -24,7 +21,6 @@
 		},
 		{
 			"name": "IssPosition",
-			"description": "User is asking for a current position of the ISS",
 			"enabledByDefault": true,
 			"utterances": [
 				"where is the space station",
