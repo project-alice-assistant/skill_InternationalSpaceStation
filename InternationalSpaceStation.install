@@ -1,24 +1,24 @@
 {
-	"name": "InternationalSpaceStation",
-	"version": "1.0.28",
-	"icon": "fas fa-space-shuttle",
-	"category": "information",
-	"author": "mjlill",
-	"maintainers": [
-		"maxbachmann",
-		"Psycho",
-		"philipp2310"
-	],
-	"desc": "Inquire information about the international space station",
-	"aliceMinVersion": "1.0.0-a4",
-	"systemRequirements": [],
-	"pipRequirements": [],
-	"conditions": {
-		"lang": [
-			"en",
-			"de",
-			"fr"
-		],
-		"online": true
-	}
+    "name": "InternationalSpaceStation",
+    "version": "1.0.29",
+    "icon": "fas fa-space-shuttle",
+    "category": "information",
+    "author": "mjlill",
+    "maintainers": [
+        "maxbachmann",
+        "Psycho",
+        "philipp2310"
+    ],
+    "desc": "Inquire information about the international space station",
+    "aliceMinVersion": "1.0.0-a4",
+    "systemRequirements": [],
+    "pipRequirements": [],
+    "conditions": {
+        "lang": [
+            "en",
+            "de",
+            "fr"
+        ],
+        "online": true
+    }
 }
