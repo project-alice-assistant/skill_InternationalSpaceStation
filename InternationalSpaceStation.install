@@ -1,6 +1,6 @@
 {
     "name": "InternationalSpaceStation",
-    "version": "1.0.33",
+    "version": "1.0.34",
     "icon": "fas fa-space-shuttle",
     "category": "information",
     "author": "mjlill",
@@ -10,7 +10,7 @@
         "philipp2310"
     ],
     "desc": "Inquire information about the international space station",
-    "aliceMinVersion": "1.0.0-b3",
+    "aliceMinVersion": "1.0.0-b5",
     "systemRequirements": [],
     "pipRequirements": [],
     "conditions": {

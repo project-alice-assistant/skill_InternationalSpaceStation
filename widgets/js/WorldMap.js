@@ -1,39 +1,47 @@
-(function () {
-	let counter = 5;
-
-	function positionISS() {
-		$.ajax({
-			datatype: 'json',
-			url: 'http://api.open-notify.org/iss-now.json',
-			success: function (data) {
-				let latitude = parseFloat(data['iss_position']['latitude']);
-				let longitude = parseFloat(data['iss_position']['longitude']);
-
-				let x = $('.WorldMap_map').width() / 360 * (longitude + 180);
-				let y = $('.WorldMap_map').height() / 180 * (-latitude + 90);
-
-				$('.WorldMap_satellite').css('top', y - 12);
-				$('.WorldMap_satellite').css('left', x - 12);
-				$('.WorldMap_satellite').show();
-
-				counter += 1;
-				if (counter >= 5) {
-					let $marker = $('<div class="WorldMap_dots">&#8226;</div>');
-					$marker.css('top', y - 9);
-					$marker.css('left', x - 3);
-					$('.WorldMap_map').append($marker);
-					if ($('.WorldMap_map').children('.WorldMap_dots').length > 1000) {
-						$('.WorldMap_map').find(':nth-child(2)').remove();
-					}
-					counter = 0;
-				}
-			}
-		});
-
-		setTimeout(function () {
-			positionISS()
-		}, 5000);
+class InternationalSpaceStation_WorldMap {
+	constructor(uid) {
+		this.uid = uid
+		this.map = document.querySelector(`[data-ref="WorldMap_map_${this.uid}"]`)
+		this.map.style.backgroundImage = `url("http://${window.location.hostname}:5001/api/v1.0.1/widgets/resources/img/InternationalSpaceStation/worldmap.gif")`
+		this.satellite = document.querySelector(`[data-ref="WorldMap_satellite_${this.uid}"]`)
+		this.counter = 0
+		this.positionISS()
 	}
 
-	positionISS();
-})();
+	positionISS() {
+		const self = this
+		fetch('http://api.open-notify.org/iss-now.json')
+			.then((r) => r.json())
+			.then((data) => {
+				const latitude = parseFloat(data['iss_position']['latitude'])
+				const longitude = parseFloat(data['iss_position']['longitude'])
+				const x = self.map.offsetWidth / 360 * (longitude + 180)
+				const y = self.map.offsetHeight / 180 * (-latitude + 90)
+
+				self.satellite.style.top = `${y - 12}px`
+				self.satellite.style.left = `${x - 12}px`
+				self.satellite.style.display = 'inline-block'
+
+				self.counter += 1
+				if (self.counter >= 5) {
+					const marker = document.createElement('div')
+					marker.className = 'WorldMap_dots'
+					marker.innerHTML = '&#8226;'
+					marker.style.top = `${y - 9}px`
+					marker.style.left = `${x - 3}px`
+					self.map.appendChild(marker)
+
+					if (document.querySelectorAll('.WorldMap_dots').length > 1000) {
+						document.querySelector(':nth-child(2)').remove()
+					}
+					self.counter = 0
+				}
+
+				setTimeout(this.positionISS.bind(this), 5000)
+			})
+			.catch((e) => {
+				console.warn(`Failed fetching ISS position data: ${e}`)
+				setTimeout(this.positionISS.bind(this), 5000)
+			})
+	}
+}
