@@ -10,12 +10,13 @@ class InternationalSpaceStation_WhosAboard {
 		fetch('http://api.open-notify.org/astros.json')
 			.then((r) => r.json())
 			.then((data) => {
+				self.myDiv.textContent = '';
 				data['people'].forEach(element => {
 					const li = document.createElement('li')
 					li.innerHTML = `<span class="fa-li"><i class="fas fa-user-astronaut"></i></span>${element['name']}`
 					self.myDiv.appendChild(li)
 				})
-				setTimeout(this.update.bind(this), 60*60*1000)
+				setTimeout(this.update.bind(this), 60 * 60 * 1000)
 			})
 			.catch((e) => {
 				console.warn('Failed fetching astronaut data')
