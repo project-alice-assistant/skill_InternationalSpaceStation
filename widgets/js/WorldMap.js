@@ -2,7 +2,8 @@ class InternationalSpaceStation_WorldMap {
 	constructor(uid) {
 		this.uid = uid
 		this.map = document.querySelector(`[data-ref="WorldMap_map_${this.uid}"]`)
-		this.map.style.backgroundImage = `url("http://${window.location.hostname}:5001/api/v1.0.1/widgets/resources/img/InternationalSpaceStation/worldmap.gif")`
+		this.aliceSettings = JSON.parse(window.sessionStorage.aliceSettings);
+		this.map.style.backgroundImage = `url("http://${this.aliceSettings['aliceIp']}:${this.aliceSettings['apiPort']}/api/v1.0.1/widgets/resources/img/InternationalSpaceStation/worldmap.gif")`
 		this.satellite = document.querySelector(`[data-ref="WorldMap_satellite_${this.uid}"]`)
 		this.counter = 0
 		this.positionISS()
